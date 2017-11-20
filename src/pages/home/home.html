@@ -41,18 +41,22 @@
     </ion-card-content>
   </ion-card>
    <button type="button" ion-button (click)="converteAudio()">Enviar Foto</button>
-  <p>
-      <ion-card-content>
-          <ion-label>Audio</ion-label>
-         
-            <button ion-fab  fab-left fab-bottom dark (press)="gravarAudio()" (touchend)="stopRecording()" class="buttton-start-recording">
-              <ion-icon name="microphone"></ion-icon>
-            </button>
-            <button ion-fab  fab-left fab-bottom dark (press)="startPlayback()" (touchend)="stopPlayback()" class="buttton-start-playback">
-                <ion-icon name="play"></ion-icon>
-              </button>
-      </ion-card-content>
-  </p>
+   <div>
+
+    <ion-label>Audio</ion-label>
+    
+       <button ion-button   (press)="gravarAudio()" (touchend)="stopRecording()" class="buttton-start-recording">
+         <ion-icon name="microphone"></ion-icon>
+       </button>
+     
+       <button ion-button (press)="startPlayback()" (touchend)="stopPlayback()" class="buttton-start-playback">
+           <ion-icon name="play"></ion-icon>
+         </button>
+
+   </div>
+
+
+  
   <br/>
   <br/>
   <button ion-button class="bt" block round type="submit">Enviar</button>

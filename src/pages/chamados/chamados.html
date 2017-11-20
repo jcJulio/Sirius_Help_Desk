@@ -12,14 +12,14 @@
   </ion-header>
   
   <!-- padding -->
-  <ion-content style="background-color: #162d51; ">
+  <ion-content style="background-color: #0099ff; ">
 
-        <ion-list style="background-color: #162d51;">
+        <ion-list style="background-color: #0099ff;">
             <div *ngFor="let chamado of chamados" >
                 <ion-list-header style="background-color: orange; color: white;" (click)="detalhes()" >
                 <strong>Nº do chamado: {{chamado.num_chamado}} </strong>
                 </ion-list-header>
-                <ion-item  style="background-color: #162d51; color: white;" (click)="detalhes()">
+                <ion-item  style="background-color: #0099ff; color: white;" (click)="detalhes()">
                     <strong>Assunto: </strong>{{chamado.assunto}} <br/>
                    <strong>Solicitante: </strong>{{chamado.solicitante}}<br/>                    
                   <strong>Status: </strong>{{chamado.status}}<br/>
