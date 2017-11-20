@@ -1,0 +1,67 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Inicio</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding >
+  <p>Preencha os campos abaixo e descreva seu problema!</p>
+    <form (submit)="abrirChamado()"  [formGroup]="chamadoForm">
+   <ion-item>
+    <ion-label floating color="gray">Empresa*</ion-label>
+    <ion-input  type="text" disabled="true" [(ngModel)]="empresa"  formControlName="empresa" value="{{empresa}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >Nome*</ion-label>
+    <ion-input [(ngModel)]="nome"  formControlName="nome" ></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label floating color="gray">Email*</ion-label>
+    <ion-input type="email" [(ngModel)]="email" formControlName="email" value="{{email}}"></ion-input>
+  </ion-item>  
+   <ion-item>
+    <ion-label floating color="gray">Telefone*</ion-label>
+    <ion-input type="tel" [(ngModel)]="telefone" (ionBlur)="maskTelefone()"  formControlName="telefone"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label floating color="gray">Assunto*</ion-label>
+    <ion-input [(ngModel)]="assunto"   type="text" formControlName="assunto" ></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-label floating >Detalhes*</ion-label>
+    <ion-textarea [(ngModel)]="detalhes"  formControlName="detalhes" ></ion-textarea>
+  </ion-item>
+  <ion-card>
+    <ion-card-content>
+     Foto:
+      <img [src]="base64Image" *ngIf="base64Image" />
+    </ion-card-content>
+  </ion-card>
+   <button type="button" ion-button (click)="converteAudio()">Enviar Foto</button>
+  <p>
+      <ion-card-content>
+          <ion-label>Audio</ion-label>
+         
+            <button ion-fab  fab-left fab-bottom dark (press)="gravarAudio()" (touchend)="stopRecording()" class="buttton-start-recording">
+              <ion-icon name="microphone"></ion-icon>
+            </button>
+            <button ion-fab  fab-left fab-bottom dark (press)="startPlayback()" (touchend)="stopPlayback()" class="buttton-start-playback">
+                <ion-icon name="play"></ion-icon>
+              </button>
+      </ion-card-content>
+  </p>
+  <br/>
+  <br/>
+  <button ion-button class="bt" block round type="submit">Enviar</button>
+  
+ 
+   </form>
+
+
+
+</ion-content>
+
+

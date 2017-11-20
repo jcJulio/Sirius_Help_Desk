@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        Chamados
+      </ion-title>
+      <ion-buttons end>
+      <button ion-button  style="font-size:22px" (click)="presentProfileModal()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <!-- padding -->
+  <ion-content style="background-color: #162d51; ">
+
+        <ion-list style="background-color: #162d51;">
+            <div *ngFor="let chamado of chamados" >
+                <ion-list-header style="background-color: orange; color: white;" (click)="detalhes()" >
+                <strong>Nº do chamado: {{chamado.num_chamado}} </strong>
+                </ion-list-header>
+                <ion-item  style="background-color: #162d51; color: white;" (click)="detalhes()">
+                    <strong>Assunto: </strong>{{chamado.assunto}} <br/>
+                   <strong>Solicitante: </strong>{{chamado.solicitante}}<br/>                    
+                  <strong>Status: </strong>{{chamado.status}}<br/>
+              </ion-item>
+                <!-- <ion-item>The Empire Strikes Back</ion-item>
+                <ion-item>Blade Runner</ion-item> -->
+              
+            </div>
+            
+        </ion-list>
+        <!-- <ion-item-group >
+            <div  *ngFor="let motorista of motoristas">
+          <ion-item-divider color="black">{{motorista.nome}}</ion-item-divider>
+         
+        </div>
+        </ion-item-group> -->
+      </ion-content>

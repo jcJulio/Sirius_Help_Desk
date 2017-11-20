@@ -1,0 +1,38 @@
+
+<ion-grid style="height: 100%"  scroll="false">
+
+    <ion-row justify-content-center align-items-center style="height: 100%">
+        <div  justify-content-center align-items-center align="center" margin-top>
+            <div class="splash-info">
+              <div class="splash-logo"></div>
+              <br/>
+              <div class="splash-intro">
+              {{"BEM-VINDO(A) AO SIRIUS HELP DESK!"}}
+              </div>
+            </div>
+            <div padding>
+                <form (submit)="doLogin()"  [formGroup]="loginForm">
+                    <ion-list>
+                
+                      <ion-item>
+                        <ion-label floating>{{ 'Usuário' }}</ion-label>
+                        <ion-input type="email" formControlName="usuario" value = "julio"></ion-input>
+                      </ion-item>
+              
+                
+                      <ion-item>
+                        <ion-label floating>{{ 'Senha'}}</ion-label>
+                        <ion-input type="password" formControlName="senha" value = "n4v0z6Ae"></ion-input>
+                      </ion-item>
+                
+                      <div padding>
+                          <button ion-button block type="submit"> {{ "ENTRAR" }}</button>                          
+                      </div>
+                
+                    </ion-list>
+                  </form>
+            </div>
+          </div>
+    </ion-row>
+  
+</ion-grid>

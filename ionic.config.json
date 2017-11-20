@@ -1,0 +1,14 @@
+{
+  "name": "Sirius_Mobile",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+        "path": "/goldsistemas.ddns.com.br",
+        "proxyUrl": "http://goldsistemas.ddns.com.br"
+    }
+]
+}

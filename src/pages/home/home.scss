@@ -1,0 +1,30 @@
+page-home {
+
+    .buttton-start-recording,
+    .buttton-start-recording.activated {
+        background-color: red;
+    }
+    
+    
+    .buttton-start-playback,
+    .buttton-start-playback.activated {
+        background-color: green;
+    }
+
+    
+}
+
+
+.toast-recording {
+    > div{
+         background-color:#F71518!important;
+     }
+  }
+
+  .toast-playback {
+    > div{
+         background-color:#0D8519!important;
+     }
+  }
+
+
